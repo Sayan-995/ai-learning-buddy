@@ -1,5 +1,8 @@
 .env
 Ai-Learning-Buddy/.env
+app/.env
 venv
 __pycache__
 .vscode
+ai_learning_buddy.egg-info
+build

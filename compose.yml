@@ -1,0 +1,6 @@
+services:
+  web:
+    image: sayan1234abdx/ai-learning-buddy
+    ports:
+      - "8501:8501"
+    env_file: ".env"

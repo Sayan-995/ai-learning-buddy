@@ -6,3 +6,4 @@ __pycache__
 .vscode
 ai_learning_buddy.egg-info
 build
+k8s/secret.yml

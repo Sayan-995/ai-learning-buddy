@@ -1,0 +1,32 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: study-buddy-deployment
+  namespace: streamlit
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: study-buddy
+  template:
+    metadata:
+      labels:
+        app: study-buddy
+    spec:
+      containers:
+        - image: sayan1234abdx/ai-learning-buddy
+          imagePullPolicy: Always
+          name: study-buddy
+          ports:
+          - containerPort: 8501
+          env:
+            - name: GEMINI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: study-buddy-secret
+                  key: GEMINI_API_KEY
+            - name: YOUTUBE_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: study-buddy-secret
+                  key: YOUTUBE_API_KEY

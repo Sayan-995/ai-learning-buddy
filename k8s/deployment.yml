@@ -30,3 +30,10 @@ spec:
                 secretKeyRef:
                   name: study-buddy-secret
                   key: YOUTUBE_API_KEY
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"

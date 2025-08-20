@@ -1,5 +1,5 @@
 def call(String name, String tag, String fileId){
-    configFileProvider([configFile(fileId: fileId, variable: 'env')]) {
-        sh "docker build --env-file $env -t ${name}:${tag} ."
+    configFileProvider([configFile(fileId: fileId, variable: 'ENV_FILE')]) {
+        sh "docker build --env-file $ENV_FILE -t ${name}:${tag} ."
     }
 }

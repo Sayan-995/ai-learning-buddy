@@ -6,3 +6,6 @@ googlesearch-python==1.2.3
 requests==2.31.0
 beautifulsoup4==4.12.3
 google-api-python-client==2.137.0
+pytest>=6.0.0
+pytest-cov>=3.0.0
+coverage>=6.0.0
